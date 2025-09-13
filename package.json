@@ -1,0 +1,75 @@
+{
+  "name": "offline-detector",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A lightweight TypeScript library for detecting online/offline status in browsers with modern bundler support.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/cjs/index.d.ts"
+    },
+    "./umd": "./dist/umd/index.js",
+    "./umd/min": "./dist/umd/index.min.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiteshshetty-dev/offline-detector.git"
+  },
+  "keywords": [
+    "offline-detector",
+    "online",
+    "offline",
+    "network",
+    "connectivity",
+    "typescript",
+    "browser",
+    "is-online",
+    "is-offline",
+    "is-online-event",
+    "is-offline-event"
+  ],
+  "author": "hiteshshetty-dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiteshshetty-dev/offline-detector/issues"
+  },
+  "homepage": "https://github.com/hiteshshetty-dev/offline-detector#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.9.6",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  }
+}
