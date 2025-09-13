@@ -13,7 +13,7 @@ Thank you for your interest in contributing to Offline Detector! This document p
 
 ### Prerequisites
 
-- Node.js 20+ 
+- Node.js 20+
 - npm 9+
 
 ### Available Scripts

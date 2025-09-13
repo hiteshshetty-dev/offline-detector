@@ -2,7 +2,7 @@
   "name": "offline-detector",
   "version": "1.0.0",
   "type": "module",
-  "description": "A lightweight TypeScript library for detecting online/offline status in browsers with modern bundler support.",
+  "description": "A lightweight TypeScript library for detecting online/offline status in browsers with modern bundler support. Minimal dependencies, tree-shakable, and works with any bundler.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
