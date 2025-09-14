@@ -1,0 +1,67 @@
+{
+  "name": "offline-detector",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A lightweight TypeScript library for detecting online/offline status in browsers with modern bundler support. Minimal dependencies, tree-shakable, and works with any bundler.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./umd": "./dist/umd/index.js",
+    "./umd/min": "./dist/umd/index.min.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:js && npm run build:types",
+    "build:js": "rollup -c",
+    "build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --outDir dist/types",
+    "dev": "rollup -c -w",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiteshshetty-dev/offline-detector.git"
+  },
+  "keywords": [
+    "offline-detector",
+    "online",
+    "offline",
+    "network",
+    "connectivity",
+    "typescript",
+    "browser",
+    "is-online",
+    "is-offline",
+    "is-online-event",
+    "is-offline-event"
+  ],
+  "author": "hiteshshetty-dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiteshshetty-dev/offline-detector/issues"
+  },
+  "homepage": "https://github.com/hiteshshetty-dev/offline-detector#readme",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  }
+}

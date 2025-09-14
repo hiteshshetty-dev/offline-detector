@@ -39,6 +39,8 @@ export default {
     commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
+      declaration: false,
+      declarationMap: false,
     }),
   ],
   external: [],

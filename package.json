@@ -1,75 +1,46 @@
 {
-  "name": "offline-detector",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "A lightweight TypeScript library for detecting online/offline status in browsers with modern bundler support. Minimal dependencies, tree-shakable, and works with any bundler.",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/cjs/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
-      "types": "./dist/cjs/index.d.ts"
-    },
-    "./umd": "./dist/umd/index.js",
-    "./umd/min": "./dist/umd/index.min.js"
-  },
-  "files": [
-    "dist"
+  "name": "offline-detector-packages",
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "type-check": "tsc --noEmit",
-    "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint src --ext .ts --fix",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "format:check": "prettier --check \"src/**/*.ts\"",
-    "clean": "rimraf dist",
-    "prebuild": "npm run clean",
-    "prepublishOnly": "npm run build"
+    "build": "lerna run build",
+    "dev": "lerna run dev --parallel",
+    "type-check": "lerna run type-check",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "format": "prettier --write \"**/*.{js,ts,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,json,md}\"",
+    "clean": "lerna run clean",
+    "bootstrap": "lerna bootstrap",
+    "publish": "lerna publish",
+    "version": "lerna version",
+    "changed": "lerna changed",
+    "diff": "lerna diff",
+    "demo:site:dev": "cd examples/site && npm run dev",
+    "demo:site:build": "cd examples/site && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hiteshshetty-dev/offline-detector.git"
   },
-  "keywords": [
-    "offline-detector",
-    "online",
-    "offline",
-    "network",
-    "connectivity",
-    "typescript",
-    "browser",
-    "is-online",
-    "is-offline",
-    "is-online-event",
-    "is-offline-event"
-  ],
-  "author": "hiteshshetty-dev",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hiteshshetty-dev/offline-detector/issues"
-  },
-  "homepage": "https://github.com/hiteshshetty-dev/offline-detector#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.57.0",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "rollup": "^4.9.6",
-    "typescript": "^5.3.3"
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
+    "eslint": "^9.35.0",
+    "lerna": "^8.2.3",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.50.1",
+    "typescript": "^5.9.2"
   },
+  "license": "MIT",
   "engines": {
     "node": ">=20.0.0"
-  },
-  "dependencies": {
-    "tslib": "^2.8.1"
   }
 }

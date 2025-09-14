@@ -24,6 +24,6 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "rollup.config.js"],
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
