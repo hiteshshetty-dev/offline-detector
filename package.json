@@ -19,7 +19,10 @@
     "changed": "lerna changed",
     "diff": "lerna diff",
     "demo:site:dev": "cd examples/site && npm run dev",
-    "demo:site:build": "cd examples/site && npm run build"
+    "demo:site:build": "cd examples/site && npm run build",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish"
   },
   "repository": {
     "type": "git",
