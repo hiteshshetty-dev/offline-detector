@@ -7,7 +7,8 @@ export function createOfflineDetector(
 
   let isListening = false;
 
-  const isBrowser = typeof window !== 'undefined' && typeof navigator !== 'undefined';
+  const isBrowser =
+    typeof window !== 'undefined' && typeof navigator !== 'undefined';
 
   if (!isBrowser) {
     throw new Error('OfflineDetector can only be used in browser environments');

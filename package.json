@@ -34,13 +34,24 @@
     "@typescript-eslint/parser": "^8.43.0",
     "eslint": "^9.35.0",
     "lerna": "^8.2.3",
+    "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "rollup": "^4.50.1",
+    "simple-git-hooks": "^2.13.1",
     "typescript": "^5.9.2"
   },
   "license": "MIT",
   "engines": {
     "node": ">=20.0.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{css,md,js,jsx,json,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }

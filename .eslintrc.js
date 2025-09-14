@@ -5,10 +5,7 @@ module.exports = {
     es2020: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
-  ],
+  extends: ['eslint:recommended', '@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,

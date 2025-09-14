@@ -15,8 +15,8 @@ export interface UseOfflineDetectorReturn {
 export function useOfflineDetector(
   options: UseOfflineDetectorOptions = {}
 ): UseOfflineDetectorReturn {
-  const { onOnline, onOffline} = options;
-  
+  const { onOnline, onOffline } = options;
+
   const [isOnline, setIsOnline] = useState<boolean>(true);
   const detector = useRef<OfflineDetector | null>(null);
 
@@ -34,7 +34,7 @@ export function useOfflineDetector(
         },
       });
       detector.current = newDetector;
-      
+
       // Set initial status
       setIsOnline(newDetector.isOnline());
       newDetector.start();

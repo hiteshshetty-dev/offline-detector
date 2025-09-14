@@ -18,7 +18,7 @@ npm install offline-detector
 
 ## Usage
 
-*Coming soon - API documentation will be available once the library is implemented.*
+_Coming soon - API documentation will be available once the library is implemented._
 
 ## License
 
