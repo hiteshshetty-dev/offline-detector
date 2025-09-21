@@ -1,0 +1,33 @@
+name: Changeset PR
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  changeset:
+    name: Changeset Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Check for changesets
+        run: npx changeset status
+
+      - name: Validate changesets
+        run: npx changeset version --dry-run

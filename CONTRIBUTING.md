@@ -44,8 +44,40 @@ Thank you for your interest in contributing to Offline Detector! This document p
 1. Ensure your code follows the project's style guidelines
 2. Add tests for your changes
 3. Update documentation if needed
-4. Submit a pull request with a clear description
-5. Respond to feedback and make necessary changes
+4. **Add a changeset** if your changes affect the package (see below)
+5. Submit a pull request with a clear description
+6. Respond to feedback and make necessary changes
+
+### Changesets
+
+This project uses [Changesets](https://github.com/changesets/changesets) for version management and publishing. If your changes affect the public API or functionality:
+
+1. **Add a changeset**: Run `npm run changeset` and follow the prompts
+2. **Commit the changeset file** along with your changes
+3. **The PR template will remind you** to check the changeset checkbox
+
+**When you don't need a changeset:**
+
+- Documentation updates
+- CI/CD changes
+- Internal refactoring that doesn't change the public API
+- Test improvements
+
+### Automated Workflows
+
+The following workflows run automatically:
+
+- **CI**: Runs on every push and PR to validate code quality
+- **Changeset Validation**: Validates changeset configuration in PRs
+- **Release**: Publishes packages to NPM when changesets are merged to main
+- **Demo Deployment**: Deploys the example site to GitHub Pages
+
+### Release Process
+
+1. **Create a PR** with your changes and changeset
+2. **Merge to main** - this triggers the release workflow
+3. **Automatic publishing** - packages are published to NPM automatically
+4. **Demo site updates** - the example site is deployed to GitHub Pages
 
 ## Issue Reporting
 

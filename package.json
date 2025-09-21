@@ -22,7 +22,8 @@
     "demo:site:build": "cd examples/site && npm run build",
     "changeset": "changeset",
     "changeset:version": "changeset version",
-    "changeset:publish": "changeset publish"
+    "changeset:publish": "changeset publish",
+    "release": "npm run build && npm run changeset:publish"
   },
   "repository": {
     "type": "git",
@@ -49,7 +50,7 @@
     "node": ">=20.0.0"
   },
   "simple-git-hooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
     "*.{css,md,js,jsx,json,ts,tsx}": [
