@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Check for changesets
-        run: npx changeset status
+        run: npm run changeset status
 
       - name: Validate changesets
-        run: npx changeset version --dry-run
+        run: npm run changeset version --dry-run
