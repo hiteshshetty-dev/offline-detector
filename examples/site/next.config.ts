@@ -7,6 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const nextConfig: NextConfig = {
   outputFileTracingRoot: __dirname,
   output: 'export',
+  basePath: '/offline-detector',
   /* config options here */
 };
 
