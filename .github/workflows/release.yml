@@ -55,11 +55,21 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install root dependencies
         run: npm ci
 
+      - name: Build core packages
+        run: npm run build
+
+      - name: Install demo site dependencies
+        run: |
+          cd examples/site
+          npm ci
+
       - name: Build demo site
-        run: npm run demo:site:build
+        run: |
+          cd examples/site
+          npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

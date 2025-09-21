@@ -1,0 +1,9 @@
+# Build directories
+dist/
+.next/
+out/
+node_modules/
+
+# Generated files
+*.min.js
+*.min.css
