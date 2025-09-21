@@ -30,6 +30,7 @@
     "url": "git+https://github.com/hiteshshetty-dev/offline-detector.git"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
