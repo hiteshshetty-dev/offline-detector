@@ -1,5 +1,11 @@
 # offline-detector
 
+## 1.1.0
+
+### Minor Changes
+
+- 59c7c96: Adds the support for network polling to detect user's connection state
+
 ## 1.0.1
 
 ### Patch Changes
