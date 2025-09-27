@@ -49,34 +49,39 @@ npm run format
 
 ## Roadmap
 
-### Phase 1: Core Library (Current)
+### Phase 1: Core Library
 
 - [x] Repository setup and boilerplate
 - [x] TypeScript configuration
 - [x] Modern bundler support (Rollup)
 - [x] ESLint and Prettier setup
-- [ ] Basic online/offline detection implementation
-- [ ] API documentation
-- [ ] Example website/demo configuration
-- [ ] Testing framework setup (Jest/Vitest)
-- [ ] Unit tests and CI/CD
+- [x] Basic online/offline detection implementation
+- [x] API documentation
+- [x] Example website/demo configuration
+- [x] Testing framework setup (Jest/Vitest)
+- [x] Unit tests and CI/CD
 
 ### Phase 2: Enhanced Features
 
-- [ ] Network quality detection
+- [x] Network quality detection
+- [x] Custom polling strategies
+- [x] Connection verification with configurable test URLs
+- [x] Debounced state changes
+- [x] Failure threshold handling
 - [ ] Connection type detection
-- [ ] Custom polling strategies
-- [ ] Browser support documentation
 
 ### Phase 3: Monorepo Migration
 
-- [ ] Convert to monorepo structure (Lerna/Nx/Rush)
-- [ ] Split into multiple packages:
-  - `@offline-detector/core` - Core detection logic
-  - `@offline-detector/react` - React hooks and components
-  - `@offline-detector/vue` - Vue composables and components
-  - `@offline-detector/svelte` - Svelte stores and components
-  - `@offline-detector/angular` - Angular services and directives
-- [ ] Shared tooling and configuration
-- [ ] Independent versioning and publishing
+- [x] Convert to monorepo structure (Lerna)
+- [] Split into multiple packages:
+  - `offline-detector` - Core detection logic
+  - `offline-detector/react` - React hooks and components
+  - `offline-detector/vue` - Vue composables and components
+  - `offline-detector/svelte` - Svelte stores and components
+  - `offline-detector/angular` - Angular services and directives
+- [x] Shared tooling and configuration
+- [x] Independent versioning and publishing (Changesets)
 - [ ] Cross-package testing and validation
+- [ ] Comprehensive testing suite
+- [ ] Performance benchmarks
+- [ ] Browser compatibility testing

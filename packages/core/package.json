@@ -33,6 +33,9 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "clean": "rimraf dist",
     "prebuild": "npm run clean"
   },
@@ -59,7 +62,13 @@
     "url": "https://github.com/hiteshshetty-dev/offline-detector/issues"
   },
   "homepage": "https://github.com/hiteshshetty-dev/offline-detector#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "@swc/jest": "^0.2.39",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.1.3",
+    "jest-environment-jsdom": "^30.1.2",
+    "ts-jest": "^29.4.4"
+  },
   "engines": {
     "node": ">=20.0.0"
   },
