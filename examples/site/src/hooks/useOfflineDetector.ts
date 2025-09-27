@@ -32,6 +32,13 @@ export function useOfflineDetector(
           setIsOnline(false);
           onOffline?.();
         },
+        networkVerification: {
+          enabled: true,
+          url: '/offline-detector/favicon.ico',
+          requestTimeout: 5000,
+          interval: 2000,
+          maxFailures: 3,
+        },
       });
       detector.current = newDetector;
 
@@ -45,7 +52,7 @@ export function useOfflineDetector(
     } catch (error) {
       console.error('Failed to create offline detector:', error);
     }
-  }, []);
+  }, [onOnline, onOffline]);
 
   return {
     isOnline,
