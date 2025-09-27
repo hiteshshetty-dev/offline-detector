@@ -17,7 +17,7 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
-      <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="text-4xl lg:text-6xl font-bold">
           <span
             className={`title-gradient bg-clip-text text-transparent transition-all duration-500`}
