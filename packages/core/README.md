@@ -1,5 +1,11 @@
 # Offline Detector
 
+[![npm version](https://img.shields.io/npm/v/offline-detector.svg?style=flat-square)](https://www.npmjs.com/package/offline-detector)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/hiteshshetty-dev/offline-detector/blob/main/LICENSE)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/offline-detector?style=flat-square)](https://bundlephobia.com/package/offline-detector)
+[![Tests](https://img.shields.io/github/actions/workflow/status/hiteshshetty-dev/offline-detector/ci.yml?branch=main&label=tests&style=flat-square)](https://github.com/hiteshshetty-dev/offline-detector/actions/workflows/ci.yml)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/hiteshshetty-dev/offline-detector/blob/main/CONTRIBUTING.md)
+
 A lightweight TypeScript library for detecting online/offline status in browsers with modern bundler support. Features intelligent network verification, debounced state changes, and flexible configuration options.
 
 ## Features

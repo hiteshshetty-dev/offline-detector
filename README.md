@@ -13,8 +13,11 @@ A lightweight TypeScript library for detecting online/offline status in browsers
 - 🌐 **Browser-focused**: Designed specifically for browser environments
 - 📦 **Bundler agnostic**: Works with any modern bundler (Webpack, Vite, Rollup, etc.)
 - 🔧 **TypeScript**: Full TypeScript support with type definitions
-- 🚀 **Lightweight**: Minimal bundle size
+- 🚀 **Lightweight**: Minimal bundle size with tree-shaking support
 - 📱 **Cross-platform**: Works across all modern browsers
+- 🔍 **Smart Detection**: Combines native events with network verification
+- ⚡ **Debounced**: Prevents rapid state changes with configurable debouncing
+- 🎯 **Configurable**: Extensive options for customization
 
 ## Installation
 
@@ -22,9 +25,91 @@ A lightweight TypeScript library for detecting online/offline status in browsers
 npm install offline-detector
 ```
 
-## Usage
+## Quick Start
 
-_Coming soon - API documentation will be available once the library is implemented._
+```typescript
+import { createOfflineDetector } from 'offline-detector';
+
+const detector = createOfflineDetector({
+  onOnline: () => console.log('Back online!'),
+  onOffline: () => console.log('Gone offline!'),
+});
+
+// Start monitoring
+detector.start();
+
+// Check current status
+console.log(detector.isOnline()); // true or false
+
+// Stop monitoring
+detector.stop();
+```
+
+## Packages
+
+This is a monorepo containing multiple packages:
+
+- **[`offline-detector`](./packages/core/README.md)** - Core detection library with comprehensive API documentation
+- `offline-detector/react` - React hooks and components _(coming soon)_
+- `offline-detector/vue` - Vue composables and components _(coming soon)_
+
+## API Overview
+
+The core API is simple and intuitive:
+
+```typescript
+const detector = createOfflineDetector({
+  onOnline: () => console.log('Back online!'),
+  onOffline: () => console.log('Gone offline!'),
+});
+
+detector.start(); // Start monitoring
+detector.isOnline(); // Check current status
+detector.stop(); // Stop monitoring
+detector.destroy(); // Clean up resources
+```
+
+📖 **[View complete API documentation →](./packages/core/README.md#api-reference)**
+
+## Advanced Usage
+
+### Custom Configuration
+
+```typescript
+const detector = createOfflineDetector({
+  onOnline: () => syncPendingData(),
+  onOffline: () => showOfflineBanner(),
+  stateChangeDebounceDelay: 2000,
+  networkVerification: {
+    enabled: true,
+    url: 'https://api.example.com/health',
+    interval: 30000,
+    maxFailures: 2,
+  },
+});
+```
+
+### React Integration
+
+```typescript
+function useOfflineDetector() {
+  const [isOnline, setIsOnline] = useState(true);
+
+  useEffect(() => {
+    const detector = createOfflineDetector({
+      onOnline: () => setIsOnline(true),
+      onOffline: () => setIsOnline(false),
+    });
+
+    detector.start();
+    return () => detector.destroy();
+  }, []);
+
+  return isOnline;
+}
+```
+
+📚 **[View more examples and detailed configuration →](./packages/core/README.md#usage-examples)**
 
 ## License
 
