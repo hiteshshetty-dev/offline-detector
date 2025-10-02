@@ -1,0 +1,214 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for offline-detector
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting your feature request
+      options:
+        - label: I have searched existing issues to ensure this feature hasn't been requested before
+          required: true
+        - label: I have read the [documentation](https://github.com/hiteshshetty-dev/offline-detector/blob/main/packages/core/README.md) and [roadmap](https://github.com/hiteshshetty-dev/offline-detector/blob/main/README.md#roadmap)
+          required: true
+        - label: This feature aligns with the project's goals and scope
+          required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: A clear and concise description of the feature you'd like to see
+      placeholder: Briefly describe the feature...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What use case does it address?
+      placeholder: |
+        Describe the problem or use case this feature would address...
+        
+        Example: "As a developer building a PWA, I need to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see implemented
+      placeholder: |
+        Describe your proposed solution in detail...
+        
+        Include:
+        - How it would work
+        - API design (if applicable)
+        - Integration points
+        - Configuration options
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or features you've considered
+      placeholder: |
+        What alternatives have you considered?
+        
+        - Alternative approach 1...
+        - Alternative approach 2...
+        - Why the proposed solution is preferred...
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Target Package
+      description: Which package should this feature be added to?
+      options:
+        - offline-detector (core)
+        - offline-detector/react
+        - offline-detector/vue
+        - New package
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Low - Nice to have
+        - Medium - Would be helpful
+        - High - Important for my use case
+        - Critical - Blocking my project
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Estimated Complexity
+      description: How complex do you think this feature would be to implement?
+      options:
+        - Simple - Small addition or configuration option
+        - Medium - New functionality with moderate complexity
+        - Complex - Significant new feature or architectural change
+        - Not sure
+
+  - type: checkboxes
+    id: breaking-changes
+    attributes:
+      label: Breaking Changes
+      description: Would this feature require breaking changes?
+      options:
+        - label: This feature would require breaking changes to the existing API
+          required: false
+        - label: This feature can be implemented without breaking changes
+          required: false
+        - label: I'm not sure about breaking changes
+          required: false
+
+  - type: textarea
+    id: api-design
+    attributes:
+      label: API Design (if applicable)
+      description: If this feature involves new APIs, provide a proposed design
+      render: typescript
+      placeholder: |
+        // Proposed API design
+        interface NewFeatureOptions {
+          // configuration options
+        }
+        
+        const detector = createOfflineDetector({
+          newFeature: {
+            // usage example
+          }
+        });
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Provide specific use cases where this feature would be beneficial
+      placeholder: |
+        1. Use case 1: When building a...
+        2. Use case 2: For applications that...
+        3. Use case 3: In scenarios where...
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples
+      description: Provide examples of how this feature would be used
+      render: typescript
+      placeholder: |
+        // Example usage
+        import { createOfflineDetector } from 'offline-detector';
+        
+        const detector = createOfflineDetector({
+          // show how the new feature would be used
+        });
+
+  - type: textarea
+    id: research
+    attributes:
+      label: Research & References
+      description: Any research, references, or similar implementations in other libraries
+      placeholder: |
+        - Similar feature in library X: [link]
+        - Relevant specification: [link]
+        - Research paper or article: [link]
+
+  - type: checkboxes
+    id: compatibility
+    attributes:
+      label: Compatibility Requirements
+      description: What compatibility requirements should this feature consider?
+      options:
+        - label: Should work in all modern browsers
+          required: false
+        - label: Should work with all supported bundlers
+          required: false
+        - label: Should maintain TypeScript support
+          required: false
+        - label: Should be tree-shakeable
+          required: false
+        - label: Should work in Node.js environments
+          required: false
+        - label: Should work in Web Workers
+          required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or examples about the feature request
+      placeholder: Any additional information that might be helpful...
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Would you like to contribute to implementing this feature?
+      options:
+        - label: I would like to work on implementing this feature
+          required: false
+        - label: I can help with testing this feature
+          required: false
+        - label: I can help with documentation for this feature
+          required: false

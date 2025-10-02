@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/hiteshshetty-dev/offline-detector/blob/main/packages/core/README.md
+    about: Read the comprehensive documentation and API reference
+  - name: 💬 Discussions
+    url: https://github.com/hiteshshetty-dev/offline-detector/discussions
+    about: Ask questions, share ideas, and discuss with the community
+  - name: 🌐 Live Demo
+    url: https://hiteshshetty-dev.github.io/offline-detector/
+    about: Try out the library in our interactive demo
+  - name: 🚀 Examples
+    url: https://github.com/hiteshshetty-dev/offline-detector/tree/main/examples
+    about: Browse code examples and integration guides

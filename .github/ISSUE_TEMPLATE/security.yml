@@ -1,0 +1,182 @@
+name: 🔒 Security Vulnerability
+description: Report a security vulnerability (please use private reporting when possible)
+title: "[Security]: "
+labels: ["security", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **IMPORTANT: For serious security vulnerabilities, please use [GitHub's private vulnerability reporting](https://github.com/hiteshshetty-dev/offline-detector/security/advisories/new) instead of creating a public issue.**
+        
+        This template should only be used for:
+        - Minor security concerns
+        - Security-related questions
+        - Requests for security features
+        
+        For actual vulnerabilities that could be exploited, please report them privately.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting
+      options:
+        - label: I have determined this is not a critical security vulnerability that should be reported privately
+          required: true
+        - label: I have searched existing issues to ensure this hasn't been reported before
+          required: true
+        - label: I understand that security issues should generally be reported through private channels
+          required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How severe do you consider this security concern?
+      options:
+        - Low - Minor security improvement or question
+        - Medium - Potential security issue with limited impact
+        - High - Should be reported privately instead
+        - Critical - Should be reported privately instead
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Security Category
+      description: What type of security concern is this?
+      options:
+        - Information Disclosure
+        - Input Validation
+        - Authentication/Authorization
+        - Cross-Site Scripting (XSS)
+        - Cross-Site Request Forgery (CSRF)
+        - Dependency Vulnerability
+        - Configuration Issue
+        - Privacy Concern
+        - Security Feature Request
+        - Security Question
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Security Concern Description
+      description: Describe the security concern or vulnerability
+      placeholder: |
+        Please provide a clear description of the security concern...
+        
+        Note: Avoid including sensitive details that could help attackers exploit the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential Impact
+      description: What could happen if this security concern is not addressed?
+      placeholder: |
+        Describe the potential impact:
+        - What data could be exposed?
+        - What functionality could be compromised?
+        - Who would be affected?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Affected Package
+      description: Which package is affected by this security concern?
+      options:
+        - offline-detector (core)
+        - offline-detector/react
+        - offline-detector/vue
+        - offline-detector/svelte
+        - offline-detector/angular
+        - Build/Development tools
+        - Documentation/Examples
+        - All packages
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Affected Version(s)
+      description: Which version(s) are affected?
+      placeholder: e.g., 1.2.3, or "all versions", or "1.0.0 - 1.2.3"
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: Describe the environment where this security concern applies
+      placeholder: |
+        - Browser(s): Chrome, Firefox, etc.
+        - Operating System: Windows, macOS, Linux
+        - Framework: React, Vue, etc.
+        - Bundler: Webpack, Vite, etc.
+        - Any specific configuration or setup
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce (if applicable)
+      description: If this is a vulnerability, provide general steps (avoid detailed exploitation steps)
+      placeholder: |
+        General steps to reproduce the issue:
+        1. Set up offline-detector with...
+        2. Configure...
+        3. Observe...
+        
+        Note: Please avoid providing detailed exploitation steps in public issues.
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Suggested Mitigation
+      description: Do you have any suggestions for how to address this security concern?
+      placeholder: |
+        Potential solutions or mitigations:
+        - Approach 1...
+        - Approach 2...
+        - Reference to security best practices...
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any relevant security advisories, CVEs, or documentation
+      placeholder: |
+        - Related CVE: CVE-YYYY-NNNN
+        - Security advisory: [link]
+        - OWASP reference: [link]
+        - Similar issue in other projects: [link]
+
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Responsible Disclosure
+      description: Please confirm your understanding of responsible disclosure
+      options:
+        - label: I understand that detailed exploitation information should not be shared publicly
+          required: true
+        - label: I will not publicly disclose detailed vulnerability information until it's been addressed
+          required: true
+        - label: I am willing to work with maintainers to resolve this issue responsibly
+          required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information about this security concern
+      placeholder: Any additional context that might be helpful...

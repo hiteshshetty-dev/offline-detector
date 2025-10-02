@@ -1,0 +1,173 @@
+name: ❓ Question / Support
+description: Ask a question or get help with using offline-detector
+title: "[Question]: "
+labels: ["question", "support"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out! Please provide as much detail as possible to help us assist you effectively.
+        
+        **Before submitting:** Please check the [documentation](https://github.com/hiteshshetty-dev/offline-detector/blob/main/packages/core/README.md) and search existing issues to see if your question has already been answered.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before asking your question
+      options:
+        - label: I have read the [documentation](https://github.com/hiteshshetty-dev/offline-detector/blob/main/packages/core/README.md)
+          required: true
+        - label: I have searched existing issues for similar questions
+          required: true
+        - label: I have checked the [examples](https://github.com/hiteshshetty-dev/offline-detector/tree/main/examples) for guidance
+          required: true
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: Question Type
+      description: What type of question is this?
+      options:
+        - Usage / How-to
+        - Configuration
+        - Integration
+        - Best Practices
+        - Troubleshooting
+        - Performance
+        - Browser Compatibility
+        - Framework Integration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: Please describe your question in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide context about what you're trying to achieve
+      placeholder: |
+        What are you trying to build or accomplish?
+        
+        Example: "I'm building a PWA that needs to sync data when coming back online..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-approach
+    attributes:
+      label: What Have You Tried?
+      description: Describe what you've already attempted
+      placeholder: |
+        - Approach 1: I tried...
+        - Approach 2: I also attempted...
+        - Results: What happened when you tried these approaches...
+
+  - type: textarea
+    id: code-sample
+    attributes:
+      label: Current Code
+      description: Share your current implementation (if applicable)
+      render: typescript
+      placeholder: |
+        import { createOfflineDetector } from 'offline-detector';
+        
+        // Your current code here...
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      description: Which package are you asking about?
+      options:
+        - offline-detector (core)
+        - offline-detector/react
+        - offline-detector/vue
+        - General question
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Package Version
+      description: What version are you using?
+      placeholder: e.g., 1.2.3
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: What environment are you working in?
+      multiple: true
+      options:
+        - Browser (Chrome)
+        - Browser (Firefox)
+        - Browser (Safari)
+        - Browser (Edge)
+        - Mobile Browser
+        - React Application
+        - Vue Application
+        - Svelte Application
+        - Angular Application
+        - Next.js
+        - Nuxt.js
+        - Vite
+        - Webpack
+        - Node.js
+        - Web Worker
+        - Service Worker
+        - Other
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What do you expect to happen or what would be the ideal solution?
+      placeholder: Describe what you're hoping to achieve...
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other details that might be helpful
+      placeholder: |
+        - Specific requirements or constraints
+        - Error messages (if any)
+        - Links to relevant documentation or examples
+        - Screenshots or diagrams (if helpful)
+
+  - type: checkboxes
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How urgent is this question?
+      options:
+        - label: This is blocking my project
+          required: false
+        - label: This would help improve my implementation
+          required: false
+        - label: This is for learning/exploration
+          required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Would you be interested in contributing?
+      options:
+        - label: I'd be interested in contributing documentation improvements based on the answer
+          required: false
+        - label: I'd be interested in contributing examples based on the answer
+          required: false
