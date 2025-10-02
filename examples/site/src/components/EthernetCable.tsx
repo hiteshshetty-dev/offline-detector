@@ -5,7 +5,9 @@ interface EthernetCableProps {
 }
 const EthernetCable = ({ isOnline }: EthernetCableProps) => {
   return (
-    <div className={`cable-container justify-end h-80 ${isOnline ? 'connected' : 'disconnected'}`}>
+    <div
+      className={`cable-container justify-end h-60 sm:h-80 ${isOnline ? 'connected' : 'disconnected'}`}
+    >
       <EthernetCableRJ45 isOnline={isOnline} />
       <CableConnector isOnline={isOnline} />
     </div>
@@ -40,10 +42,16 @@ const EthernetCableRJ45 = ({ isOnline }: { isOnline: boolean }) => {
 };
 const CableConnector = ({ isOnline }: { isOnline: boolean }) => {
   return (
-    <div className={`cable-connector flex items-center justify-center ${isOnline ? 'connected' : 'disconnected'}`}>
-      <div className={`led w-4 h-4 rounded-full ${isOnline ? 'bg-green-400' : 'bg-red-400'}`}></div>
-      <div className="cable-connector-text px-2">{isOnline ? 'Connected' : 'Disconnected'}</div>
+    <div
+      className={`cable-connector flex items-center justify-center ${isOnline ? 'connected' : 'disconnected'}`}
+    >
+      <div
+        className={`led w-3 h-3 sm:w-4 sm:h-4 rounded-full ${isOnline ? 'bg-green-400' : 'bg-red-400'}`}
+      ></div>
+      <div className="cable-connector-text px-1 sm:px-2 text-sm sm:text-base">
+        {isOnline ? 'Connected' : 'Disconnected'}
+      </div>
     </div>
-  )
-}
+  );
+};
 export default EthernetCable;

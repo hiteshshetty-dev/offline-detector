@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #0a0c10;
@@ -34,36 +34,65 @@ body {
 
 .cable {
   width: 200rem;
-  background: #D8D8D8;
-  height: 30px;
+  background: #d8d8d8;
+  height: 20px;
+}
+@media (min-width: 640px) {
+  .cable {
+    height: 30px;
+  }
 }
 .rj45Connector {
-  height: 60px;
-  width: 120px;
-  background: #D8D8D8;
+  height: 40px;
+  width: 80px;
+  background: #d8d8d8;
   clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 95%);
-  border-radius: 8px;
-  overflow:hidden;
+  border-radius: 6px;
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .rj45Connector {
+    height: 60px;
+    width: 120px;
+    border-radius: 8px;
+  }
 }
 .lines {
-  padding-left: 20px;
+  padding-left: 12px;
   height: 100%;
   display: flex;
-  gap: 6px;
+  gap: 4px;
+}
+@media (min-width: 640px) {
+  .lines {
+    padding-left: 20px;
+    gap: 6px;
+  }
 }
 .line {
-  background: #B3B3B3;
-  width: 4px;
+  background: #b3b3b3;
+  width: 3px;
   height: 100%;
+}
+@media (min-width: 640px) {
+  .line {
+    width: 4px;
+  }
 }
 .semi-line {
   background: none;
   position: relative;
-  width: 3px;
+  width: 2px;
 }
-.semi-line:before, .semi-line:after {
+@media (min-width: 640px) {
+  .semi-line {
+    width: 3px;
+  }
+}
+.semi-line:before,
+.semi-line:after {
   content: '';
-  background: #B3B3B3;
+  background: #b3b3b3;
   position: absolute;
   height: 45%;
   width: 100%;
@@ -77,23 +106,42 @@ body {
 }
 .connector {
   background: white;
-  width: 50px;
-  height: 42px;
-  border-radius: 0 4px 4px 0;
+  width: 32px;
+  height: 28px;
+  border-radius: 0 3px 3px 0;
   position: relative;
+}
+@media (min-width: 640px) {
+  .connector {
+    width: 50px;
+    height: 42px;
+    border-radius: 0 4px 4px 0;
+  }
 }
 .gold-pins {
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 6px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
+}
+@media (min-width: 640px) {
+  .gold-pins {
+    top: 10px;
+    gap: 2px;
+  }
 }
 .gold-pin {
-  background: #FFD209;
-  width: 20px;
-  height: 2px;
+  background: #ffd209;
+  width: 12px;
+  height: 1.5px;
+}
+@media (min-width: 640px) {
+  .gold-pin {
+    width: 20px;
+    height: 2px;
+  }
 }
 .cable-container {
   max-width: 100vw;
@@ -111,20 +159,38 @@ body {
 }
 
 .cable-rj45.connected {
-  transform: translateX(45px);
+  transform: translateX(30px);
 }
 
 .cable-rj45.disconnected {
-  transform: translateX(-1rem);
+  transform: translateX(-0.5rem);
+}
+
+@media (min-width: 640px) {
+  .cable-rj45.connected {
+    transform: translateX(45px);
+  }
+
+  .cable-rj45.disconnected {
+    transform: translateX(-1rem);
+  }
 }
 
 .cable-connector {
-  min-width: 200px;
+  min-width: 140px;
   width: auto;
-  height: 70px;
+  height: 50px;
   z-index: 2;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .cable-connector {
+    min-width: 200px;
+    height: 70px;
+    border-radius: 8px;
+  }
 }
 
 .cable-connector.connected {
