@@ -9,12 +9,14 @@ body:
       value: |
         ⚠️ **IMPORTANT: For serious security vulnerabilities, please use [GitHub's private vulnerability reporting](https://github.com/hiteshshetty-dev/offline-detector/security/advisories/new) instead of creating a public issue.**
         
+        **Please read our [Security Policy](https://github.com/hiteshshetty-dev/offline-detector/blob/main/SECURITY.md) before reporting.**
+        
         This template should only be used for:
         - Minor security concerns
         - Security-related questions
         - Requests for security features
         
-        For actual vulnerabilities that could be exploited, please report them privately.
+        For actual vulnerabilities that could be exploited, please report them privately following our security policy.
 
   - type: checkboxes
     id: prerequisites

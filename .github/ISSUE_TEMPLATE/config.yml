@@ -12,3 +12,6 @@ contact_links:
   - name: 🚀 Examples
     url: https://github.com/hiteshshetty-dev/offline-detector/tree/main/examples
     about: Browse code examples and integration guides
+  - name: 🔒 Security Policy
+    url: https://github.com/hiteshshetty-dev/offline-detector/blob/main/SECURITY.md
+    about: Read our security policy and learn how to report vulnerabilities

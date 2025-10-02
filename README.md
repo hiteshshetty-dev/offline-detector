@@ -115,6 +115,10 @@ function useOfflineDetector() {
 
 [MIT](./LICENSE)
 
+## Security
+
+Security is important to us. If you discover a security vulnerability, please follow our [Security Policy](./SECURITY.md) for responsible disclosure.
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
