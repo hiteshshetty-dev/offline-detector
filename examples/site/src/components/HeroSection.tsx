@@ -1,6 +1,9 @@
 import React from 'react';
 import EthernetCable from './EthernetCable';
-import { useOfflineDetector } from '@/hooks/useOfflineDetector';
+
+interface HeroSectionProps {
+  isOnline: boolean;
+}
 
 const scrollToFeatures = () => {
   const featuresSection = document.getElementById('features');
@@ -12,9 +15,7 @@ const scrollToFeatures = () => {
   }
 };
 
-const HeroSection = () => {
-  const { isOnline } = useOfflineDetector();
-
+const HeroSection: React.FC<HeroSectionProps> = ({ isOnline }) => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
       <div className="max-w-4xl mx-auto text-center space-y-4">

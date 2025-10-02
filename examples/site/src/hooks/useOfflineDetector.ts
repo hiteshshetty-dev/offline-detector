@@ -36,8 +36,8 @@ export function useOfflineDetector(
           enabled: true,
           url: '/offline-detector/favicon.ico',
           requestTimeout: 5000,
-          interval: 2000,
-          maxFailures: 3,
+          interval: 1000,
+          maxFailures: 2,
         },
       });
       detector.current = newDetector;

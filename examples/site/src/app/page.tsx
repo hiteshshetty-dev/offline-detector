@@ -1,23 +1,19 @@
 'use client';
 
-import { useState } from 'react';
 import { useOfflineDetector } from '@/hooks/useOfflineDetector';
 import Footer from '../components/Footer';
 import InstallationSection from '../components/InstallationSection';
 import FeatureSection from '../components/FeatureSection';
 import HeroSection from '../components/HeroSection';
-
-interface LogEntry {
-  id: number;
-  timestamp: string;
-  message: string;
-  type: 'info' | 'success' | 'warning' | 'error';
-}
+import NetworkToggle from '../components/NetworkToggle';
 
 export default function Home() {
+  const { isOnline } = useOfflineDetector();
+
   return (
     <div className="min-h-screen hero-gradient">
-      <HeroSection />
+      <NetworkToggle />
+      <HeroSection isOnline={isOnline} />
       <FeatureSection />
       <InstallationSection />
       <Footer />

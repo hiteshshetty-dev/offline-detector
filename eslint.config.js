@@ -24,6 +24,11 @@ module.exports = [
         fetch: 'readonly',
         Promise: 'readonly',
         Error: 'readonly',
+        RequestInfo: 'readonly',
+        RequestInit: 'readonly',
+        Response: 'readonly',
+        Request: 'readonly',
+        URL: 'readonly',
       },
     },
     plugins: {
