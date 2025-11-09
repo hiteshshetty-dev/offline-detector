@@ -116,6 +116,12 @@ export default function RootLayout({
 }>): React.ReactNode {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="PKZVftl2pGhpEjUq8Ma4kYOqpUgfsFq3UmDcGuzJDGU"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
