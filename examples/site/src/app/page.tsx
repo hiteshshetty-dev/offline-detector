@@ -6,17 +6,21 @@ import InstallationSection from '../components/InstallationSection';
 import FeatureSection from '../components/FeatureSection';
 import HeroSection from '../components/HeroSection';
 import NetworkToggle from '../components/NetworkToggle';
+import StructuredData from '../components/StructuredData';
 
 export default function Home() {
   const { isOnline } = useOfflineDetector();
 
   return (
-    <div className="min-h-screen hero-gradient">
-      <NetworkToggle />
-      <HeroSection isOnline={isOnline} />
-      <FeatureSection />
-      <InstallationSection />
-      <Footer />
-    </div>
+    <>
+      <StructuredData />
+      <main className="min-h-screen hero-gradient">
+        <NetworkToggle />
+        <HeroSection isOnline={isOnline} />
+        <FeatureSection />
+        <InstallationSection />
+        <Footer />
+      </main>
+    </>
   );
 }
