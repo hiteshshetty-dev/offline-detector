@@ -1,5 +1,11 @@
 # offline-detector
 
+## 1.1.1
+
+### Patch Changes
+
+- 424adc1: updated the node version to node 18
+
 ## 1.1.0
 
 ### Minor Changes
